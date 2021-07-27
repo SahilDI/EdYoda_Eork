@@ -1,0 +1,90 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 1. What do you understand by object oriented programming in Python?\par
+Object oriented programming refers to the process of solving a problem by creating objects. This approach takes into account two key factors of an object- attributes and behaviour.\par
+\par
+2. What is inheritance in Object oriented programming? Give an example of multiple inheritance.\par
+Inheritance is one of the core concepts of object-oriented programming. It is a process of deriving a class from a different class and form a hierarchy of classes that share the same attributes and methods. It is generally used for deriving different kinds of exceptions, create custom logic for existing frameworks and even map domain models for database.\par
+\par
+3. What is a decorator?\par
+Another questions I\rquote ve been asked in every interview. It\rquote s deserves a post itself, but you\rquote re prepared if you can walk through writing your own example.\par
+A decorator allows adding functionality to an existing function by passing that existing function to a decorator, which executes the existing function as well as additional code.\par
+We\rquote ll write a decorator that that logs when another function is called.\par
+\par
+4. What is the difference between instance, static and class methods in python?\par
+Instance methods : accept self parameter and relate to a specific instance of the class.\par
+Static methods : use @staticmethod decorator, are not related to a specific instance, and are self-contained (don\rquote t modify class or instance attributes)\par
+Class methods : accept cls parameter and can modify the class itself\par
+We\rquote re going to illustrate the difference around a fictional CoffeeShop class.\par
+\par
+5. Explain how the map function works\par
+map returns a map object (an iterator) which can iterate over returned values from applying a function to every element in a sequence. The map object can also be converted to a list if required.\par
+\par
+6. Explain how the filter function works\par
+Filter literally does what the name says. It filters elements in a sequence.\par
+Each element is passed to a function which is returned in the outputted sequence if the function returns True and discarded if the function returns False.\par
+\par
+7. What does \ldblquote self\rdblquote  refer to in a class?\par
+Self refers to the instance of the class itself. It\rquote s how we give methods access to and the ability to update the object they belong to.\par
+Below, passing self to __init__() gives us the ability to set the color of an instance on initialization.\par
+\par
+8. Name mutable and immutable objects\par
+Immutable means the state cannot be modified after creation. Examples are: int, float, bool, string and tuple.\par
+Mutable means the state can be modified after creation. Examples are list, dict and set.\par
+\par
+9. How would you convert a list into a tuple?-\par
+All we have to do is create a tuple with three elements. The first element of the tuple is the first element of the list, which can be found using my_list[0].\par
+The second element of the tuple is the last element in the list. my_list[len(my_list) - 1] will give us this element. We could also have used the pop() method, but that would alter the list.\par
+\par
+10. How would you convert a list to an array?\par
+During programming, there will be instances when you will need to convert existing lists to arrays in order to perform certain operations on them (arrays enable mathematical operations to be performed on them in ways that lists do not).\par
+Here we\rquote ll be using numpy.array(). This function of the numpy library takes a list as an argument and returns an array that contains all the elements of the list.\par
+\par
+11.What is pickling and unpickling?\par
+Pickle module accepts any Python object and converts it into a string representation and dumps it into a file by using dump function, this process is called pickling. While the process of retrieving original Python objects from the stored string representation is called unpickling.\par
+\par
+12.Explain inheritance in Python with an example\par
+Inheritance allows one class to gain all the members(say attributes and methods) of another class. Inheritance provides code reusability, makes it easier to create and maintain an application. The class from which we are inheriting is called super-class and the class that is inherited is called a derived / child class.\par
+\tab They are different types of inheritance supported by Python:\par
+\par
+\tab 1.Single Inheritance \f1\endash  where a derived class acquires the members of a single superclass.\par
+\tab 2.Multi-level inheritance \endash  a derived class d1 is inherited from base class base1, and d2 is \tab   inherited from base2.\par
+\tab 3.Hierarchical inheritance \endash  from one base class you can inherit any number of child classes\par
+\tab 4.Multiple inheritances \endash  a derived class is inherited from more than one base class.\par
+\par
+13. Explain the difference between range() and xrange()\par
+For the most part, xrange and range are the exact same in terms of functionality. They both provide a way to generate a list of integers for you to use. The only difference is that range returns a Python list object and xrange returns an xrange object.\par
+This means that xrange doesn\rquote t actually generate a static list at run-time like range does. It creates the values as you need them with a special technique called yielding. This technique is used with a type of object known as generators.\par
+\par
+14.What are global and local variables in Python?\par
+\b Global Variables:\par
+\b0   Variables declared outside a function or in global space are called global variables. These   variables can be accessed by any function in the program.\par
+\b Local Variables:\f0\lang16393\tab\b0\par
+\f1\lang9 Any variable declared inside a function is known as a local variable. This variable is present in   the local space and not in the global space.\par
+\par
+15.How is try/except used in Python?\par
+An exception is an error that occurs while the program is executing. When this error occurs, the program will stop and generate an exception which then gets handled in order to prevent the program from crashing.\par
+\par
+The exceptions generated by a program are caught in the try block and handled in the except block.\par
+\tab\b Try\b0 : Lets you test a block of code for errors.\par
+\tab\b Except\b0 : Lets you handle the error.\par
+\par
+16.What is a Tuple? What is the difference between lists and tuples in Python?\par
+Both lists and tuples in Python are sequence data types that can store a collection of items. Each item in a program can be stored in a list or a tuple and can be of any data type. But the major difference between the two of them is that lists are mutable whereas tuples are immutable. This means that in lists, one can modify the values but this cannot be done in a tuple which also means that they cannot be copied. Another major difference is that. tuples are used to store heterogeneous elements, which are elements belonging to different data types. Whereas lists are used to store homogeneous elements, which are elements that belong to the same type. An immutable object can also be used as a key in a dictionary and so, tuples can be used as dictionary keys if needed.\par
+\par
+17.What are python modules? Name some commonly used built-in modules in Python.\par
+ Python has a way to put definitions in a file and use them in a script or in an interactive instance of the interpreter. Such a file is called a module which basically is a file containing Python definitions and statements. Definitions from a module can be imported into other modules or into the main module.\par
+\par
+18.What is type conversion in Python?\par
+ Every value in Python has a data type. The type defines the operations that can be done on the data and the structure in which you want the data to be stored. In data science, you will often need to change the type of your data, so that it becomes easier to use and work with. Python has many data types. There are integers and float to deal with numerical values, boolean to deal with true/false values and strings to work with alphanumeric characters. Lists, tuples, dictionary and sets that are data structures to store a collection of values.\par
+ Data conversion in Python can happen either by telling the compiler to convert a data type to some other type explicitly or the compiler understands this by itself and does it for the user. These are the two ways of data conversion in Python called explicit data type and implicit data type conversion respectively.\par
+\par
+19.How does break, continue and pass work?\par
+\tab In Python, the break statement provides the opportunity to exit out of a loop when an external condition is triggered. The break statement is within the block of code under the loop statement, usually after a conditional if statement.\par
+\tab The continue statement gives the option to skip over the part of a loop where an external condition is triggered, but to go on to complete the rest of the loop. In this case, the current iteration of the loop will be disrupted but the program will return to the top of the loop. The continue statement causes a program to skip certain factors that come up within a loop, but then continue through the rest of the loop.\par
+\tab When an external condition is triggered, the pass statement allows to handle the condition without the loop being impacted in any way. All of the code will continue to be read unless a break or other statement occurs. It will be within the block of code under the loop statement, typically after a conditional if statement.\par
+\par
+20.What are some advantages of using Python over other programming languages?\par
+\tab Python comes with easy readability and a simple syntax and it comes with a biggest advantage of being open sourced. It comprises of a huge standard library for most Internet platforms like Email, HTML and many others. It has a number of built-in data types, because of which it saves programming time and effort from declaring variables\f0\par
+}
+ 
